@@ -88,3 +88,59 @@ class Model:
         for i in range(1, num, 1):
             resultado *= i
         return resultado
+
+    def exercicioTreze(self):
+        fib1 = 0
+        fib2 = 1
+        fib3 = 0
+        resultado = '0\n1\n'
+        for i in range(1,9,1):
+            fib3 = fib1 + fib2
+            resultado += f'{fib3}\n'
+            fib1 = fib2
+            fib2 = fib3
+        return resultado
+
+    def exercicioQuatorze(self,num):
+        fib1 = 0
+        fib2 = 1
+        fib3 = 0
+        resultado = '0\n1\n'
+        for i in range(1, num - 2, 1):
+            fib3 = fib1 + fib2
+            resultado += f'{fib3}\n'
+            fib1 = fib2
+            fib2 = fib3
+        return resultado
+
+    def exercicioQuinze(self,num):
+        resto = 0
+        while num / 10 != 0:
+            resto += num % 10
+            num = (num / 10)
+        return f'A soma dos números é {resto}'
+    def exercicioDezeseis(self,num):
+        pares = ''
+        impares = ''
+        for i in range(0, num, 1):
+            if i % 2 == 0:
+                pares += f'{i}\n'
+            elif i % 2 == 1:
+                impares += f'{i}\n'
+        return f'{pares}\n =================\n {impares}\n'
+
+    def exercicioDezesete(self,num):
+        resultado = '2\n3\n5'
+        for i in range(5, num, 1):
+            if i % 2 != 0 and i % 3 != 0 and i % 5 != 0:
+                resultado += f'\n{i}'
+        return resultado
+
+    def exercicioDezoito(self,num):
+        par = ''
+        impar = ''
+        if num % 2 == 0:
+            par = num / 2
+        elif num % 2 == 1:
+            impar = num * 3 + 1
+        return f'{par}\n{impar}\n'
